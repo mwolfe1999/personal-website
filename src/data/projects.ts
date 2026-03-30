@@ -317,6 +317,7 @@ export const projects: Project[] = [
       results:
         "Runs daily with zero maintenance. Built with lessons from the Birthday Reminders project — applied dedup logic, catch-up handling, and file path resilience from the start. All thresholds are configurable via JSON.",
     },
+    image: "/images/text-back.png",
     techStack: ["Claude Code", "iMessage MCP", "Cron", "macOS Automation"],
     category: "Built for Personal Productivity",
     hasDetailPage: true,
@@ -363,6 +364,7 @@ export const projects: Project[] = [
       results:
         "Tracks 100+ birthdays with zero missed reminders since launch. Open-source on GitHub — designed as a free replacement for paid birthday apps. Double-run prevention and catch-up logic ensure reliability without duplicates.",
     },
+    image: "/images/birthday-ping.png",
     techStack: ["Claude Code", "iMessage MCP", "GraphQL", "macOS Automation", "Cron"],
     category: "Built for Family & Friends",
     githubUrl: "https://github.com/mwolfe1999/birthday-reminders",
