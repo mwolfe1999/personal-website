@@ -56,7 +56,7 @@ export function ResumeSection() {
               {highlights.map((item) => (
                 <div key={item.title} className="border-b border-border pb-4 last:border-0">
                   <span className="font-semibold text-accent">{item.title}</span>
-                  <span className="text-text-secondary"> — {item.description}</span>
+                  <span className="text-lg text-text-secondary"> — {item.description}</span>
                 </div>
               ))}
             </div>

@@ -19,6 +19,7 @@ export type Project = {
   id: string;
   name: string;
   blurb: string;
+  shortBlurb?: string;
   detail?: ProjectDetail;
   image?: string;
   video?: string;
@@ -42,6 +43,8 @@ export const projects: Project[] = [
   {
     id: "travel-app",
     name: "Wharton Travel Guide",
+    shortBlurb:
+      "B-school students travel a lot, and planning trips is hard. This app lets students share itineraries, browse peer reviews by city, and generate custom trips they can export directly to Google Maps.",
     blurb:
       "A peer-powered travel platform where MBA students share and discover recommendations across four Japanese cities. Features AI-powered trip uploads, interactive maps, itinerary generation, and a social recommendation feed with 1,000+ real reviews.",
     detail: {
@@ -80,16 +83,7 @@ export const projects: Project[] = [
       results:
         "30 active users across the Wharton first-year class. 1,088 real recommendations aggregated from 10 travelers. NPS survey conducted with strong satisfaction scores. 58 passing tests across 6 test suites.",
     },
-    techStack: [
-      "React",
-      "TypeScript",
-      "Vite",
-      "Supabase",
-      "Claude API",
-      "Leaflet",
-      "Tailwind CSS",
-      "Vercel",
-    ],
+    techStack: ["React", "Supabase", "Claude API", "TypeScript", "Vite", "Leaflet", "Tailwind CSS", "Vercel"],
     category: "Built for Fellow MBA Students",
     liveUrl: "https://wharton-travel-guide.vercel.app",
     githubUrl: "https://github.com/Wharton-Travel/wharton-travel-guide",
@@ -97,18 +91,12 @@ export const projects: Project[] = [
   },
   {
     id: "makeup-artistry",
-    name: "Rachel Wolfe Makeup Artistry",
+    name: "Makeup Artist Business Website",
+    shortBlurb:
+      "My sister is a makeup artist expanding from special effects for film into weddings and personal services. I built her a site so she\u2019s discoverable online, can showcase her services, and gives potential clients an easy way to get in touch.",
     blurb:
       "A luxury portfolio and booking site for a Toronto-based makeup artist specializing in film/TV, bridal, SFX, and events. Features image carousels by category, expandable pricing cards with tiered packages, and a Supabase-backed contact form that sends formatted booking inquiries via Resend.",
-    techStack: [
-      "Lovable",
-      "React",
-      "TypeScript",
-      "Tailwind CSS",
-      "Supabase",
-      "Resend",
-      "Vite",
-    ],
+    techStack: ["Lovable", "React", "Supabase", "TypeScript", "Tailwind CSS", "Resend", "Vite"],
     category: "Built for Family & Friends",
     liveUrl: "https://wolfemakeupartistry.com/",
     githubUrl: "https://github.com/mwolfe1999/rachelwolfemakeup",
@@ -119,6 +107,8 @@ export const projects: Project[] = [
   {
     id: "ai-news",
     name: "AI Tweet Digest",
+    shortBlurb:
+      "I get my AI news on X, but I kept bookmarking tweets and never reading them. I used the X API to build a weekly digest that summarizes everything I saved \u2014 so I can stay on top of the latest tools without the scroll.",
     blurb:
       "A fully automated pipeline that turns bookmarked AI tweets into curated email digests. Text a tweet URL to a Twilio number; the system extracts content, follows linked articles, generates Claude-powered summaries, and delivers daily and weekly digests via email.",
     detail: {
@@ -158,23 +148,16 @@ export const projects: Project[] = [
       results:
         "Fully automated pipeline running daily since launch. Digests deliver 10 curated AI news items per cycle with zero manual curation. The system never silently fails — it logs errors, skips bad entries, and sends failure alerts.",
     },
-    techStack: [
-      "Next.js",
-      "TypeScript",
-      "Supabase",
-      "Claude API",
-      "Twilio",
-      "X API",
-      "Resend",
-      "Vercel Cron",
-    ],
+    techStack: ["X API", "Claude API", "Supabase", "Next.js", "TypeScript", "Twilio", "Resend", "Vercel Cron"],
     category: "Built for Personal Productivity",
     githubUrl: "https://github.com/mwolfe1999/ai-tweet-digest",
     hasDetailPage: true,
   },
   {
     id: "scheduling-assistant",
-    name: "Wharton Schedule Matcher",
+    name: "Schedule Sync",
+    shortBlurb:
+      "B-school students are constantly texting each other to find overlapping free time for coffee, lunch, or a walk to campus. This app integrates with Wharton\u2019s course and club calendars to make it easy to see who\u2019s around and when.",
     blurb:
       "A schedule coordination app for MBA students to find common free time with classmates. Visual weekly calendar grid, AI-powered availability queries, and network management — all in a single React component.",
     detail: {
@@ -210,7 +193,7 @@ export const projects: Project[] = [
       ],
       results: "",
     },
-    techStack: ["React", "Vite", "Tailwind CSS", "Claude API", "Vercel"],
+    techStack: ["React", "Claude API", "Vercel", "Vite", "Tailwind CSS"],
     category: "Built for Fellow MBA Students",
     githubUrl: "https://github.com/mwolfe1999/wharton-meet",
     isWip: true,
@@ -218,7 +201,9 @@ export const projects: Project[] = [
   },
   {
     id: "good-student",
-    name: "Good Student Assistant",
+    name: "Coursework Pilot",
+    shortBlurb:
+      "Some days I get lost in a vibe coding project and lose sight of MBA coursework. I built a tool that scrapes assignments from Canvas LMS, creates calendar tasks with due dates, and makes sure nothing falls through the cracks.",
     blurb:
       "An AI-powered tool to help students stay on top of coursework — automatically scraping assignments, tracking deadlines, and surfacing what's due next. Designed to replace the mental overhead of juggling multiple course portals.",
     detail: {
@@ -252,7 +237,7 @@ export const projects: Project[] = [
       ],
       results: "",
     },
-    techStack: ["Claude Code", "AI Automation"],
+    techStack: ["Claude Code", "Canvas API", "Cron"],
     category: "Built for Fellow MBA Students",
     isWip: true,
     hasDetailPage: true,
@@ -261,7 +246,9 @@ export const projects: Project[] = [
   // --- Built for Personal Productivity (cont.) ---
   {
     id: "texting-assistant",
-    name: "Texting Friends Assistant",
+    name: "Text Back Reminder",
+    shortBlurb:
+      "I\u2019ll admit it \u2014 I could be a better texter. So I built an accountability tool: if I haven\u2019t replied to a friend in over 48 hours, I get an iMessage reminder nudging me to follow up.",
     blurb:
       "A daily automation that scans iMessage for unreplied conversations and sends a follow-up reminder. Runs as a scheduled Claude Code task with smart frequency reduction — no more accidentally ghosting friends.",
     detail: {
@@ -298,13 +285,15 @@ export const projects: Project[] = [
       results:
         "Runs daily with zero maintenance. Built with lessons from the Birthday Reminders project — applied dedup logic, catch-up handling, and file path resilience from the start. All thresholds are configurable via JSON.",
     },
-    techStack: ["Claude Code", "iMessage MCP", "macOS Automation", "Cron"],
+    techStack: ["Claude Code", "iMessage MCP", "Cron", "macOS Automation"],
     category: "Built for Personal Productivity",
     hasDetailPage: true,
   },
   {
     id: "birthday-reminders",
-    name: "Birthday Text Assistant",
+    name: "Birthday Ping",
+    shortBlurb:
+      "I try to be the friend to remember birthdays. I used to use Facebook reminders, but I don\u2019t use Facebook much anymore. Instead, I had Claude scan my socials, build a calendar, and send text reminders directly to my phone.",
     blurb:
       "An open-source replacement for paid birthday reminder apps. Reads birthdays from a JSON file, runs daily via Claude Code, and sends iMessage reminders 7 days before and on the day. Includes Facebook bulk-import via GraphQL scraping.",
     detail: {
@@ -342,13 +331,7 @@ export const projects: Project[] = [
       results:
         "Tracks 100+ birthdays with zero missed reminders since launch. Open-source on GitHub — designed as a free replacement for paid birthday apps. Double-run prevention and catch-up logic ensure reliability without duplicates.",
     },
-    techStack: [
-      "Claude Code",
-      "iMessage MCP",
-      "macOS Automation",
-      "Cron",
-      "GraphQL",
-    ],
+    techStack: ["Claude Code", "iMessage MCP", "GraphQL", "macOS Automation", "Cron"],
     category: "Built for Family & Friends",
     githubUrl: "https://github.com/mwolfe1999/birthday-reminders",
     hasDetailPage: true,
@@ -358,6 +341,8 @@ export const projects: Project[] = [
   {
     id: "march-madness",
     name: "March Madness Bracket Engine",
+    shortBlurb:
+      "I\u2019m tired of getting my bracket busted and losing money in pools with friends. So I worked with Claude to build a data-driven prediction engine that pulls from multiple sources to generate strategies optimized for pool value.",
     blurb:
       "A data-driven bracket prediction engine that synthesizes 9 sources — ESPN BPI, Vegas spreads, Kalshi odds, expert consensus, injury reports, and more — into three confidence-tiered tournament strategies optimized for pool value.",
     detail: {
@@ -400,14 +385,7 @@ export const projects: Project[] = [
       results:
         "Generated 3 complete 63-game brackets for the 2026 tournament. Model synthesized data from 9 sources covering all 68 teams across 4 regions. Sanity checks validated against 20+ years of historical upset rate patterns.",
     },
-    techStack: [
-      "Node.js",
-      "JavaScript",
-      "JSON Pipeline",
-      "ESPN API",
-      "Kalshi",
-      "Web Scraping",
-    ],
+    techStack: ["Node.js", "Web Scraping", "Claude API", "JavaScript", "ESPN API", "Kalshi"],
     category: "Built for Fun",
     githubUrl: "https://github.com/mwolfe1999/march-madness-2026",
     hasDetailPage: true,

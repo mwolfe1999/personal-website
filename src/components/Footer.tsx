@@ -5,7 +5,7 @@ export function Footer() {
         <h2 className="font-heading text-3xl md:text-4xl text-text-primary mb-4">
           Get in Touch
         </h2>
-        <p className="text-text-secondary mb-8 max-w-md mx-auto">
+        <p className="text-lg text-text-secondary mb-8 max-w-md mx-auto">
           Interested in working together or just want to chat about building with AI?
           I&apos;d love to hear from you.
         </p>

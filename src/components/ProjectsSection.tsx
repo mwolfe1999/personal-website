@@ -10,10 +10,8 @@ export function ProjectsSection() {
           <h2 className="font-heading text-4xl md:text-5xl text-text-primary mb-4">
             Projects
           </h2>
-          <p className="text-text-secondary max-w-2xl mb-16">
-            A collection of products I&apos;ve built with AI tools — from full-stack web
-            apps to personal automations. Each one went from idea to working product
-            in days, not months.
+          <p className="text-lg text-text-secondary max-w-2xl mb-16">
+            A collection of products I&apos;ve built. Check them out - feedback is always welcome!
           </p>
         </FadeIn>
 
@@ -28,7 +26,7 @@ export function ProjectsSection() {
                   {category}
                 </h3>
               </FadeIn>
-              <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <StaggerContainer className="grid grid-cols-1 gap-6">
                 {categoryProjects.map((project) => (
                   <StaggerItem key={project.id}>
                     <ProjectCard project={project} />
