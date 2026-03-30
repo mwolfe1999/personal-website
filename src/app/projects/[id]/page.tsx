@@ -75,7 +75,24 @@ export default async function ProjectDetailPage({
           ))}
         </div>
 
-        {/* TODO: Video/screenshot hero media would go here */}
+        {/* Hero media */}
+        {project.video && (
+          <div className="mb-10 rounded-lg overflow-hidden border border-border shadow-md">
+            <video
+              src={project.video}
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="w-full"
+            />
+          </div>
+        )}
+        {!project.video && project.image && (
+          <div className="mb-10 rounded-lg overflow-hidden border border-border shadow-md">
+            <img src={project.image} alt={project.name} className="w-full" />
+          </div>
+        )}
 
         {/* Overview */}
         <section className="mb-12">

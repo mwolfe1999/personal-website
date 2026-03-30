@@ -81,8 +81,9 @@ export const projects: Project[] = [
         { name: "Vercel", role: "Hosting with automatic deploys from main branch" },
       ],
       results:
-        "30 active users across the Wharton first-year class. 1,088 real recommendations aggregated from 10 travelers. NPS survey conducted with strong satisfaction scores. 58 passing tests across 6 test suites.",
+        "99 active users across the Wharton class. 617 real recommendations aggregated from 30+ travelers across 4 Japanese cities.",
     },
+    video: "/videos/travel-guide.mp4",
     techStack: ["React", "Supabase", "Claude API", "TypeScript", "Vite", "Leaflet", "Tailwind CSS", "Vercel"],
     category: "Built for Fellow MBA Students",
     liveUrl: "https://wharton-travel-guide.vercel.app",
@@ -96,11 +97,42 @@ export const projects: Project[] = [
       "My sister is a makeup artist expanding from special effects for film into weddings and personal services. I built her a site so she\u2019s discoverable online, can showcase her services, and gives potential clients an easy way to get in touch.",
     blurb:
       "A luxury portfolio and booking site for a Toronto-based makeup artist specializing in film/TV, bridal, SFX, and events. Features image carousels by category, expandable pricing cards with tiered packages, and a Supabase-backed contact form that sends formatted booking inquiries via Resend.",
+    detail: {
+      overview:
+        "My sister Rachel is a Toronto-based makeup artist who's been doing special effects work for film for years. As she expanded into weddings and personal services, she needed a professional web presence — somewhere clients could find her, see her work, and easily get in touch. I built her a full portfolio and booking site using Lovable.",
+      howItWorks: [
+        {
+          title: "Discover Services",
+          description:
+            "Visitors browse six service categories — Film + TV, Special Effects, Music Videos, Bridal, Events, and Beauty Lessons — each with expandable pricing details.",
+        },
+        {
+          title: "Explore the Portfolio",
+          description:
+            "Image carousels showcase Rachel's work across Beauty and Film/SFX categories, giving potential clients a visual sense of her range.",
+        },
+        {
+          title: "Submit a Booking Inquiry",
+          description:
+            "A contact form captures name, email, phone, service type, event date, and location. Submissions trigger a Supabase Edge Function that sends a formatted email to Rachel via Resend.",
+        },
+      ],
+      techStackDetailed: [
+        { name: "Lovable", role: "No-code platform for rapid site generation and iteration" },
+        { name: "React + TypeScript", role: "Component-based frontend with type safety" },
+        { name: "Tailwind CSS", role: "Custom luxury design with gold accents and serif typography" },
+        { name: "Supabase", role: "Edge Functions for processing contact form submissions" },
+        { name: "Resend", role: "Email delivery for booking inquiries" },
+      ],
+      results:
+        "Live at wolfemakeupartistry.com. Rachel is now discoverable online with a professional presence that matches the quality of her work.",
+    },
+    video: "/videos/makeup-site.mp4",
     techStack: ["Lovable", "React", "Supabase", "TypeScript", "Tailwind CSS", "Resend", "Vite"],
     category: "Built for Family & Friends",
     liveUrl: "https://wolfemakeupartistry.com/",
     githubUrl: "https://github.com/mwolfe1999/rachelwolfemakeup",
-    hasDetailPage: false,
+    hasDetailPage: true,
   },
 
   // --- Built for Personal Productivity ---
